@@ -1,0 +1,23 @@
+ title Exercise 4 New Note
+ 
+ actor User
+ 
+ User->Browser: clicks submit button
+ Browser->Server: Send User input to server
+ note right of Browser: POST request
+ note left of  Server: Add input to notes
+ Server->Browser: Send response to browser
+ note left of  Server: 302 status code response
+ note right of Browser: Reload
+ Browser->Server: Fetch main.css
+ note right of Browser: GET request
+ Server->Browser: Provide main.css
+ Browser->Server: fetch main.css
+ note right of Browser:GET request
+ Server->Browser: provide main.js
+ Browser->Server: fetch data.json
+ note right of Browser: GET request
+ Server->Browser: provide updated data.json
+ Browser->Server: Render page
+ 
+
